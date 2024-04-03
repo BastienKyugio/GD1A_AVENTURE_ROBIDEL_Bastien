@@ -16,26 +16,29 @@ public class PlayerController : MonoBehaviour
 
     Vector3 movement;
     Vector3 aim;
-    bool isAiming;
-    bool endOfAiming;
+    public bool isAiming;
+    public bool endOfAiming;
 
     private void Awake()
     {
         player = ReInput.players.GetPlayer(playerId);
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
 
     void Update()
     {
 
-        ProcessInput();
+        ProcessInputs();
         AimAndShoot();
         Animate();
         Move();
 
     }
 
-    private void ProcessInput()
+    private void ProcessInputs()
     {
         if (useController)
         {
@@ -47,15 +50,21 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
-            Vector3 mouseMovement = new Vector3(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"), 0.0f);
-            aim = aim + mouseMovement;
+            movement = new Vector3(player.GetAxis("MoveHorizontal"), player.GetAxis("MoveVertical"), 0.0f);
+            Vector3 mouseMovement = new
+                Vector3(player.GetAxis("AimHorizontal"), player.GetAxis("AimVertical"), 0.0f);
+            aim += mouseMovement;
             if (aim.magnitude > 1.0f)
             {
                 aim.Normalize();
             }
-            isAiming = Input.GetButton("FireKey");
-            endOfAiming = Input.GetButtonUp("FireKey");
+            isAiming = player.GetButton("Fire");
+            endOfAiming = player.GetButtonUp("Fire");
+        }
+
+        if (movement.magnitude >1.0f)
+        {
+            movement.Normalize();
         }
     }
 
@@ -76,7 +85,7 @@ public class PlayerController : MonoBehaviour
 
         if (aim.magnitude > 0.0f)
         {
-            crossHair.transform.localPosition = aim * 0.4f;
+            crossHair.transform.localPosition = aim * 4f;
             crossHair.SetActive(true);
 
             shootingDirection.Normalize();

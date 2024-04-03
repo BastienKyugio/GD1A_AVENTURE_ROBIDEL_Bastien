@@ -73,11 +73,11 @@ ScriptedImporter:
   previousAsepriteImporterSettings:
     fileImportMode: 1
     importHiddenLayers: 0
-    layerImportMode: 1
+    layerImportMode: 0
     defaultPivotSpace: 0
-    defaultPivotAlignment: 7
+    defaultPivotAlignment: 0
     customPivotPosition: {x: 0.5, y: 0.5}
-    mosaicPadding: 4
+    mosaicPadding: 16
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -86,18 +86,18 @@ ScriptedImporter:
   asepriteImporterSettings:
     fileImportMode: 1
     importHiddenLayers: 0
-    layerImportMode: 1
+    layerImportMode: 0
     defaultPivotSpace: 0
-    defaultPivotAlignment: 7
+    defaultPivotAlignment: 0
     customPivotPosition: {x: 0.5, y: 0.5}
-    mosaicPadding: 4
+    mosaicPadding: 16
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638471337065979854
+  platformSettingsDirtyTick: 638477446130164318
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -121,18 +121,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: CrossHair
+  - name: Layer 1
     originalName: 
-    pivot: {x: 0.5, y: 0.07692308}
+    pivot: {x: 0.5, y: 0.6923077}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 4
+      x: 16
+      y: 16
       width: 6
       height: 13
-    spriteID: 4b78bda186c234a45a7c04f4a2a79312
+    spriteID: 43cefb9e67b18c346ac4223133c33717
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -140,24 +140,24 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 4}
+    uvTransform: {x: 16, y: 16}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 543142362
-    name: CrossHair
-    layerFlags: 0
+    guid: 1317222744
+    name: Layer 1
+    layerFlags: 3
     layerType: 0
     blendMode: 0
     cells:
-    - name: CrossHair
+    - name: Layer 1
       frameIndex: 0
       cellRect:
         x: 5
         y: -1
         width: 6
         height: 13
-      spriteId: 4b78bda186c234a45a7c04f4a2a79312
+      spriteId: 43cefb9e67b18c346ac4223133c33717
     linkedCells: []
     parentIndex: -1
   platformSettings:
