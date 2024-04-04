@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public bool useController;
 
     public Animator animator;
+    private Rigidbody2D rgbd;
     public GameObject crossHair;
     public GameObject fireballPrefab;
 
