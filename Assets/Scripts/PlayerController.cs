@@ -86,7 +86,7 @@ public class PlayerController : MonoBehaviour
 
         if (aim.magnitude > 0.0f)
         {
-            crossHair.transform.localPosition = aim * 4f;
+            crossHair.transform.localPosition = aim * 2f;
             crossHair.SetActive(true);
 
             shootingDirection.Normalize();
