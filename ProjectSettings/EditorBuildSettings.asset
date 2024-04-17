@@ -11,4 +11,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/scene01.unity
     guid: 7b3ee218ac240b6469ea2eddbf89b8b7
+  - enabled: 1
+    path: Assets/Scenes/Merchant.unity
+    guid: 29d526599264b9c40b9ee2529d416334
+  - enabled: 1
+    path: Assets/Scenes/Overworld.unity
+    guid: 07c04fe6803af144cb2511d4ff934261
+  - enabled: 1
+    path: Assets/Scenes/Infirmary.unity
+    guid: 99e9f32490b20cf4eadf2e8ba1e38cdf
+  - enabled: 1
+    path: Assets/Scenes/Home.unity
+    guid: 002e9bd419f7a22489a8927b5204cf1d
+  - enabled: 1
+    path: Assets/Scenes/Guild.unity
+    guid: 6df8e65ec94f5584d82d64eb7989aa34
+  - enabled: 1
+    path: Assets/Scenes/Dungeon.unity
+    guid: 3b89f38b2cd271248aa6ee1c3613e247
   m_configObjects: {}

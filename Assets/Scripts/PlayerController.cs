@@ -19,9 +19,18 @@ public class PlayerController : MonoBehaviour
     Vector3 aim;
     public bool isAiming;
     public bool endOfAiming;
+    public static PlayerController instance;
+
 
     private void Awake()
     {
+        if (instance != null)
+        {
+            Debug.LogWarning("Il y a plus d'une instance de PLayerController dans la scène");
+            return;
+        }
+        instance = this;
+
         player = ReInput.players.GetPlayer(playerId);
 
         Cursor.lockState = CursorLockMode.Locked;
