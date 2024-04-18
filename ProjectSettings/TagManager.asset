@@ -6,6 +6,7 @@ TagManager:
   tags:
   - crossHair
   - FadeSystem
+  - Spawn
   layers:
   - Default
   - TransparentFX

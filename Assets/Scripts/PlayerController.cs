@@ -10,9 +10,10 @@ public class PlayerController : MonoBehaviour
     public bool useController;
 
     public Animator animator;
-    private Rigidbody2D rgbd;
+    public Rigidbody2D rb;
     public GameObject crossHair;
     public GameObject fireballPrefab;
+    public BoxCollider2D playercollider;
 
 
     Vector3 movement;
