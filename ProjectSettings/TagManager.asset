@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - crossHair
+  - FadeSystem
+  - Spawn
   layers:
   - Default
   - TransparentFX

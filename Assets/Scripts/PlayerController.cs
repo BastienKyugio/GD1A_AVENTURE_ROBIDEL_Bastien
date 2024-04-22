@@ -10,18 +10,28 @@ public class PlayerController : MonoBehaviour
     public bool useController;
 
     public Animator animator;
-    private Rigidbody2D rgbd;
+    public Rigidbody2D rb;
     public GameObject crossHair;
     public GameObject fireballPrefab;
+    public BoxCollider2D playercollider;
 
 
     Vector3 movement;
     Vector3 aim;
     public bool isAiming;
     public bool endOfAiming;
+    public static PlayerController instance;
+
 
     private void Awake()
     {
+        if (instance != null)
+        {
+            Debug.LogWarning("Il y a plus d'une instance de PLayerController dans la scène");
+            return;
+        }
+        instance = this;
+
         player = ReInput.players.GetPlayer(playerId);
 
         Cursor.lockState = CursorLockMode.Locked;
