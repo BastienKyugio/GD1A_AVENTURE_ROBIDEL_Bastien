@@ -21,6 +21,7 @@ public class GameOverManager : MonoBehaviour
 
     public void OnPlayerDeath()
     {
+        DontDestroyOnLoad.instance.RemoveFromDontDestroyOnLoad();
         gameOverUI.SetActive(true);
 
     }
