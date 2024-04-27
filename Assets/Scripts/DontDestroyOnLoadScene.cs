@@ -1,16 +1,16 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class DontDestroyOnLoad : MonoBehaviour
+public class DontDestroyOnLoadScene : MonoBehaviour
 {
     public GameObject[] objects;
-    public static DontDestroyOnLoad instance;
+    public static DontDestroyOnLoadScene instance;
 
     private void Awake()
     {
         if (instance != null)
         {
-            Debug.LogWarning("Il y a plus d'une instance de DontDestroyOnLpas dans la scène");
+            Debug.LogWarning("Il y a plus d'une instance de DontDestroyOnLoadScene  dans la scène");
             return;
         }
 
