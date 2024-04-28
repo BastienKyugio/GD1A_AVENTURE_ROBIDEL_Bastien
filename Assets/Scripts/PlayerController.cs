@@ -1,12 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Rewired;
 
 public class PlayerController : MonoBehaviour
 {
-    public int playerId = 0;
-    private Player player;
+
+    private GameObject player;
     public bool useController;
 
     public Animator animator;
@@ -32,7 +31,6 @@ public class PlayerController : MonoBehaviour
         }
         instance = this;
 
-        player = ReInput.players.GetPlayer(playerId);
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -53,24 +51,24 @@ public class PlayerController : MonoBehaviour
     {
         if (useController)
         {
-            movement = new Vector3(player.GetAxis("MoveHorizontal"), player.GetAxis("MoveVertical"), 0.0f);
-            aim = new Vector3(player.GetAxis("AimHorizontal"), player.GetAxis("AimVertical"), 0.0f);
+            movement = new Vector3(Input.GetAxis("MoveHorizontal"), Input.GetAxis("MoveVertical"), 0.0f);
+            aim = new Vector3(Input.GetAxis("AimHorizontal"), Input.GetAxis("AimVertical"), 0.0f);
             aim.Normalize();
-            isAiming = player.GetButton("Fire");
-            endOfAiming = player.GetButtonUp("Fire");
+            isAiming = Input.GetButton("Fire");
+            endOfAiming = Input.GetButtonUp("Fire");
         }
         else
         {
-            movement = new Vector3(player.GetAxis("MoveHorizontal"), player.GetAxis("MoveVertical"), 0.0f);
+            movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
             Vector3 mouseMovement = new
-                Vector3(player.GetAxis("AimHorizontal"), player.GetAxis("AimVertical"), 0.0f);
+                Vector3(Input.GetAxis("AimHorizontal"), Input.GetAxis("AimVertical"), 0.0f);
             aim += mouseMovement;
             if (aim.magnitude > 1.0f)
             {
                 aim.Normalize();
             }
-            isAiming = player.GetButton("Fire");
-            endOfAiming = player.GetButtonUp("Fire");
+            isAiming = Input.GetButton("FireKey");
+            endOfAiming = Input.GetButtonUp("FireKey");
         }
 
         if (movement.magnitude >1.0f)

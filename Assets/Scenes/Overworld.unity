@@ -230,7 +230,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7648611031412152041, guid: b8729e53c7445ff4a92ce45ca1a61c2f, type: 3}
       propertyPath: sceneName
-      value: scene01
+      value: StartLevel
       objectReference: {fileID: 0}
     - target: {fileID: 7690669803189399131, guid: b8729e53c7445ff4a92ce45ca1a61c2f, type: 3}
       propertyPath: m_Name
@@ -406,6 +406,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spawn
       objectReference: {fileID: 0}
+    - target: {fileID: 2172746667383154430, guid: e9cd60bf6fdee9d4386097f17cf17a2a, type: 3}
+      propertyPath: m_TagString
+      value: Spawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370720840883816718, guid: e9cd60bf6fdee9d4386097f17cf17a2a, type: 3}
+      propertyPath: monPersoSpawn
+      value: 
+      objectReference: {fileID: 8558553452658118015, guid: 0ace0055dd9e35546bb675f424e66387, type: 3}
     - target: {fileID: 6154879117497705371, guid: e9cd60bf6fdee9d4386097f17cf17a2a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.6102467
