@@ -8,6 +8,8 @@ public class LoadSpecificScene : MonoBehaviour
 {
     public string sceneName;
     private Animator fadeSystem;
+    public Vector2 playerPosition;
+    public VectorValue playerStorage;
 
     private void Awake()
     {
@@ -15,9 +17,11 @@ public class LoadSpecificScene : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player") && !collision.isTrigger)
         {
+            playerStorage.initialValue = playerPosition;
             StartCoroutine(loadNextScene());
+
         }
     }
     public IEnumerator loadNextScene()

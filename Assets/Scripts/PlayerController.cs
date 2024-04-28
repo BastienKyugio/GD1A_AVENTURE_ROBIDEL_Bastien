@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     public GameObject crossHair;
     public GameObject fireballPrefab;
     public BoxCollider2D playercollider;
+    public VectorValue startingPosition;
 
 
     Vector3 movement;
@@ -34,6 +35,7 @@ public class PlayerController : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        transform.position = startingPosition.initialValue;
     }
 
 
