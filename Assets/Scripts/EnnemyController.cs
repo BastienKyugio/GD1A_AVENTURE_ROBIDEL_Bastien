@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnnemyController : MonoBehaviour
 {
     public Animator animator;
+    public GameObject objectToDestroy;
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.transform.CompareTag("Player"))
@@ -14,6 +15,12 @@ public class EnnemyController : MonoBehaviour
             playerhealth.TakeDamage(15);
         }
     }
-        
-    
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Weapon"))
+        {
+            Destroy(objectToDestroy);
+        }
+    }
+
 }
